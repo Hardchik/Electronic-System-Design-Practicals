@@ -1,0 +1,46 @@
+C51 COMPILER V9.60.0.0   LED_DISPLAY                                                       09/07/2022 10:42:52 PAGE 1   
+
+
+C51 COMPILER V9.60.0.0, COMPILATION OF MODULE LED_DISPLAY
+OBJECT MODULE PLACED IN .\Objects\LED_Display.obj
+COMPILER INVOKED BY: D:\Keil_v5\C51\BIN\C51.EXE LED_Display.c OPTIMIZE(8,SPEED) BROWSE DEBUG OBJECTEXTEND PRINT(.\Listin
+                    -gs\LED_Display.lst) TABS(2) OBJECT(.\Objects\LED_Display.obj)
+
+line level    source
+
+   1          #include<reg52.h>
+   2          
+   3          // 8bit LED = P2;
+   4          
+   5          void Delay(void);
+   6          
+   7          void main(void) {
+   8   1        while(1){
+   9   2          P2 = 0;
+  10   2          Delay();
+  11   2          P2 = 1;
+  12   2          Delay();
+  13   2        }
+  14   1      }
+  15          
+  16          void Delay(void) {
+  17   1        int j;
+  18   1        int i;
+  19   1        for(i=0;i<10;i++) {
+  20   2          for(j=0;j<10000;j++);
+  21   2        }
+  22   1      }
+
+
+MODULE INFORMATION:   STATIC OVERLAYABLE
+   CODE SIZE        =     43    ----
+   CONSTANT SIZE    =   ----    ----
+   XDATA SIZE       =   ----    ----
+   PDATA SIZE       =   ----    ----
+   DATA SIZE        =   ----    ----
+   IDATA SIZE       =   ----    ----
+   BIT SIZE         =   ----    ----
+END OF MODULE INFORMATION.
+
+
+C51 COMPILATION COMPLETE.  0 WARNING(S),  0 ERROR(S)
